@@ -121,7 +121,7 @@
             this.TxtPrice.Name = "TxtPrice";
             this.TxtPrice.Size = new System.Drawing.Size(100, 22);
             this.TxtPrice.TabIndex = 8;
-            this.TxtPrice.Text = "0";
+            this.TxtPrice.Text = "1";
             this.TxtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtCount

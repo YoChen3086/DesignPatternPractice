@@ -91,9 +91,9 @@
             this.LabelTotalPrice.AutoSize = true;
             this.LabelTotalPrice.Location = new System.Drawing.Point(199, 315);
             this.LabelTotalPrice.Name = "LabelTotalPrice";
-            this.LabelTotalPrice.Size = new System.Drawing.Size(33, 12);
+            this.LabelTotalPrice.Size = new System.Drawing.Size(11, 12);
             this.LabelTotalPrice.TabIndex = 5;
-            this.LabelTotalPrice.Text = "label5";
+            this.LabelTotalPrice.Text = "0";
             // 
             // BtnEnter
             // 
@@ -103,6 +103,7 @@
             this.BtnEnter.TabIndex = 6;
             this.BtnEnter.Text = "確定";
             this.BtnEnter.UseVisualStyleBackColor = true;
+            this.BtnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
             // 
             // BtnReset
             // 
@@ -112,6 +113,7 @@
             this.BtnReset.TabIndex = 7;
             this.BtnReset.Text = "重設";
             this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // TxtPrice
             // 
@@ -156,7 +158,7 @@
             this.Controls.Add(this.LabelCount);
             this.Controls.Add(this.LabelPrice);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "商場收銀軟體";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

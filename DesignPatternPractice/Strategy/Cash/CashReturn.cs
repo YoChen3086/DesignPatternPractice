@@ -11,10 +11,10 @@ namespace Strategy
         private double moneyCondition = 0.0d;
         private double moneyReturn = 0.0d;
 
-        public CashReturn(string moneyCondition, string moneyReturn)
+        public CashReturn(double moneyCondition, double moneyReturn)
         {
-            this.moneyCondition = Convert.ToDouble(moneyCondition);
-            this.moneyReturn = Convert.ToDouble(moneyReturn);
+            this.moneyCondition = moneyCondition;
+            this.moneyReturn = moneyReturn;
         }
 
         public override double acceptCash(double money)

@@ -10,9 +10,9 @@ namespace Strategy
     {
         private double moneyRebate = 1d;
 
-        public CashRebate(string moneyRebate)
+        public CashRebate(double moneyRebate)
         {
-            this.moneyRebate = Convert.ToDouble(moneyRebate);
+            this.moneyRebate = moneyRebate;
         }
 
         public override double acceptCash(double money)

@@ -18,10 +18,10 @@ namespace Strategy
                     this.cashSuper = new CashNormal();
                     break;
                 case "打8折":
-                    this.cashSuper = new CashRebate("0.8");
+                    this.cashSuper = new CashRebate(0.8d);
                     break;
                 case "滿300送100":
-                    this.cashSuper = new CashReturn("300", "100");
+                    this.cashSuper = new CashReturn(300d, 100d);
                     break;
             }
         }

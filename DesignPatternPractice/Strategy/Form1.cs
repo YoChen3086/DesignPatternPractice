@@ -29,18 +29,7 @@ namespace Strategy
 
         private void BtnEnter_Click(object sender, EventArgs e)
         {
-            switch (ComboBoxMethod.SelectedItem.ToString())
-            {
-                case "正常收費":
-                    cashContext = new CashContext(new CashNormal());
-                    break;
-                case "打8折":
-                    cashContext = new CashContext(new CashRebate("0.8"));
-                    break;
-                case "滿300送100":
-                    cashContext = new CashContext(new CashReturn("300", "100"));
-                    break;
-            }
+            cashContext = new CashContext(ComboBoxMethod.SelectedItem.ToString());
             double totalPrices = cashContext.GetResult(Convert.ToDouble(TxtPrice.Text) * Convert.ToDouble(TxtCount.Text));
             Total = Total + totalPrices;
             ListBox.Items.Add($"單價: {TxtPrice.Text} ,數量: {TxtCount.Text}, {ComboBoxMethod.SelectedItem} 合計: {totalPrices.ToString()}");

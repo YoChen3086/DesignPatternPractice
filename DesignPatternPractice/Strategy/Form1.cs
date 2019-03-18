@@ -12,6 +12,8 @@ namespace Strategy
 {
     public partial class Form1 : Form
     {
+        public CashContext cashContext = null;
+
         public double Total = 0.0d;
 
         public Form1()
@@ -27,8 +29,19 @@ namespace Strategy
 
         private void BtnEnter_Click(object sender, EventArgs e)
         {
-            CashSuper cashSuper = CashFactory.createCashAccept(ComboBoxMethod.SelectedItem.ToString());
-            double totalPrices = cashSuper.acceptCash(Convert.ToDouble(TxtPrice.Text) * Convert.ToDouble(TxtCount.Text));
+            switch (ComboBoxMethod.SelectedItem.ToString())
+            {
+                case "正常收費":
+                    cashContext = new CashContext(new CashNormal());
+                    break;
+                case "打8折":
+                    cashContext = new CashContext(new CashRebate("0.8"));
+                    break;
+                case "滿300送100":
+                    cashContext = new CashContext(new CashReturn("300", "100"));
+                    break;
+            }
+            double totalPrices = cashContext.GetResult(Convert.ToDouble(TxtPrice.Text) * Convert.ToDouble(TxtCount.Text));
             Total = Total + totalPrices;
             ListBox.Items.Add($"單價: {TxtPrice.Text} ,數量: {TxtCount.Text}, {ComboBoxMethod.SelectedItem} 合計: {totalPrices.ToString()}");
             LabelTotalPrice.Text = Total.ToString();
@@ -37,7 +50,7 @@ namespace Strategy
         private void BtnReset_Click(object sender, EventArgs e)
         {
             Total = 0.0d;
-            TxtPrice.Text = "1";
+            TxtPrice.Text = "100";
             TxtCount.Text = "1";
             ComboBoxMethod.SelectedIndex = 0;
             ListBox.Items.Clear();

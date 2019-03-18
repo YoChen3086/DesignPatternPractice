@@ -6,9 +6,9 @@ namespace SimpleFactory
 {
     public class OperationMinus : Operation
     {
-        public override double GetResult()
+        public override double GetResult(double numberA, double numberB)
         {
-            return NumberA - NumberB;
+            return numberA / numberB;
         }
     }
 }

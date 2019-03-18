@@ -16,9 +16,8 @@ namespace SimpleFactory
                 string strNumberB = Console.ReadLine();
 
                 Operation operation = OperationFactory.createOperation(strOperate);
-                operation.NumberA = Convert.ToDouble(strNumberA);
-                operation.NumberB = Convert.ToDouble(strNumberB);
-                Console.WriteLine($"結果: {operation.GetResult()}");
+                double result = operation.GetResult(Convert.ToDouble(strNumberA), Convert.ToDouble(strNumberB));
+                Console.WriteLine($"結果: {result}");
                 Console.ReadLine();
             }
             catch (Exception ex)

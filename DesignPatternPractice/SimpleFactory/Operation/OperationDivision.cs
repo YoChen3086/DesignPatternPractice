@@ -6,13 +6,13 @@ namespace SimpleFactory
 {
     public class OperationDivision : Operation
     {
-        public override double GetResult()
+        public override double GetResult(double numberA, double numberB)
         {
-            if (NumberB == 0)
+            if (numberB == 0)
             {
                 throw new Exception("錯誤:除數不可為0!!");
             }
-            return NumberA / NumberB;
+            return numberA / numberB;
         }
     }
 }

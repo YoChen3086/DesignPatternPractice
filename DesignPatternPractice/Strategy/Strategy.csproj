@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cash\CashContext.cs" />
+    <Compile Include="Cash\CashFactory.cs" />
+    <Compile Include="Cash\CashNormal.cs" />
+    <Compile Include="Cash\CashRebate.cs" />
+    <Compile Include="Cash\CashReturn.cs" />
+    <Compile Include="Cash\CashSuper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

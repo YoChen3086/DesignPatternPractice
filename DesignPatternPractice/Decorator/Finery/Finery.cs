@@ -4,8 +4,22 @@ using System.Text;
 
 namespace Decorator
 {
-    public abstract class Finery
+    public class Finery : Person
     {
-        public abstract void Show();
+        protected Person component;
+
+        // 打扮
+        public void Decorate(Person component)
+        {
+            this.component = component;
+        }
+
+        public override void Show()
+        {
+            if (component != null)
+            {
+                component.Show();
+            }            
+        }
     }
 }

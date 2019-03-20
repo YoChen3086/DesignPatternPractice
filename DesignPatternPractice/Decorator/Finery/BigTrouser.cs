@@ -9,6 +9,7 @@ namespace Decorator
         public override void Show()
         {
             Console.Write("垮褲 ");
+            base.Show();
         }
     }
 }

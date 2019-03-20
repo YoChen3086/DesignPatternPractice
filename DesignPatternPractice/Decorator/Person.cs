@@ -8,12 +8,15 @@ namespace Decorator
     {
         private string name;
 
+        public Person()
+        { }
+
         public Person(string name)
         {
             this.name = name;
         }
 
-        public void Show()
+        public virtual void Show()
         {
             Console.Write($"裝扮的{name}");
         }

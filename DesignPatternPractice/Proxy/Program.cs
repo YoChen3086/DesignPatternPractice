@@ -13,11 +13,11 @@ namespace Proxy
             SchoolGirl jiaojiao = new SchoolGirl();
             jiaojiao.Name = "嬌嬌";
 
-            Pursuit zhuojiayi = new Pursuit(jiaojiao);
+            Proxy daili = new Proxy(jiaojiao);
 
-            zhuojiayi.GiveDolls();
-            zhuojiayi.GiveFlowers();
-            zhuojiayi.GiveFlowers();
+            daili.GiveDolls();
+            daili.GiveFlowers();
+            daili.GiveFlowers();
 
             Console.ReadLine();
         }

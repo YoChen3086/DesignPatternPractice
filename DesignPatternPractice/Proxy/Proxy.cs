@@ -4,28 +4,28 @@ using System.Text;
 
 namespace Proxy
 {
-    public class Proxy
+    public class Proxy : IGiveGift
     {
-        private SchoolGirl mm;
+        private Pursuit gg;
 
         public Proxy(SchoolGirl mm)
         {
-            this.mm = mm;
+            gg = new Pursuit(mm);
         }
 
         public void GiveDolls()
         {
-            Console.WriteLine($"{mm.Name}送你洋娃娃");
+            gg.GiveDolls();
         }
 
         public void GiveFlowers()
         {
-            Console.WriteLine($"{mm.Name}送你鮮花");
+            gg.GiveFlowers();
         }
 
         public void GiveChocolate()
         {
-            Console.WriteLine($"{mm.Name}送你巧克力");
+            gg.GiveChocolate();
         }
     }
 }

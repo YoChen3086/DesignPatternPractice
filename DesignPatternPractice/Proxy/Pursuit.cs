@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Proxy
 {
-    public class Pursuit
+    public class Pursuit : IGiveGift
     {
         private SchoolGirl mm;
 

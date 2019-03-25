@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Decorator\Decorator.csproj", "{B5D14DF3-B8F7-4B12-AB16-0AB2C51C570C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{4ADF1000-420B-4BAE-A0B4-AFA0678446F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "Proxy\Proxy.csproj", "{4ADF1000-420B-4BAE-A0B4-AFA0678446F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{EE7AB61B-EA93-4983-A2B0-52CAA7C29FD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4ADF1000-420B-4BAE-A0B4-AFA0678446F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ADF1000-420B-4BAE-A0B4-AFA0678446F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ADF1000-420B-4BAE-A0B4-AFA0678446F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7AB61B-EA93-4983-A2B0-52CAA7C29FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7AB61B-EA93-4983-A2B0-52CAA7C29FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7AB61B-EA93-4983-A2B0-52CAA7C29FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7AB61B-EA93-4983-A2B0-52CAA7C29FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

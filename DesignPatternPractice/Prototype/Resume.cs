@@ -17,6 +17,11 @@ namespace Prototype
             work = new WorkExperience();
         }
 
+        private Resume(WorkExperience work)
+        {
+            this.work = (WorkExperience)work.Clone();
+        }
+
         // 設定個人資訊
         public void SetPersonlInfo(string sex, int age)
         {
@@ -40,7 +45,12 @@ namespace Prototype
 
         public object Clone()
         {
-            return (object)this.MemberwiseClone();
+            Resume resume = new Resume(this.work);
+            resume.name = this.name;
+            resume.sex = this.sex;
+            resume.age = this.age;
+
+            return resume;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Prototype
 {
-    public class WorkExperience
+    public class WorkExperience : ICloneable
     {
         private string workDate;
         private string company;
@@ -19,6 +19,11 @@ namespace Prototype
         {
             get { return company; }
             set { company = value; }
+        }
+
+        public object Clone()
+        {
+            return (object)this.MemberwiseClone();
         }
     }
 }

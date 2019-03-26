@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Prototype
 {
-    public class Resume
+    public class Resume : ICloneable
     {
         private string name;
         private string sex;
@@ -36,6 +36,11 @@ namespace Prototype
         {
             Console.WriteLine($"{name} {sex} {age}");
             Console.WriteLine($"工作經歷: {timeArea} {company}");
+        }
+
+        public object Clone()
+        {
+            return (object)this.MemberwiseClone();
         }
     }
 }

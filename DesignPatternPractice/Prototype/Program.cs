@@ -10,13 +10,11 @@ namespace Prototype
             resumeA.SetPersonlInfo("男", 29);
             resumeA.SetWorkExperience("1998-2000", "XX公司");
 
-            Resume resumeB = new Resume("大鳥");
-            resumeB.SetPersonlInfo("男", 29);
-            resumeB.SetWorkExperience("1998-2000", "XX公司");
+            Resume resumeB = (Resume)resumeA.Clone();
+            resumeB.SetWorkExperience("1998-2006", "YY企業");
 
-            Resume resumeC = new Resume("大鳥");
-            resumeC.SetPersonlInfo("男", 29);
-            resumeC.SetWorkExperience("1998-2000", "XX公司");
+            Resume resumeC = (Resume)resumeA.Clone();
+            resumeC.SetPersonlInfo("男", 24);
 
             resumeA.Display();
             resumeB.Display();

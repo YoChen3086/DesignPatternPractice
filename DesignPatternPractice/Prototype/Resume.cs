@@ -9,12 +9,12 @@ namespace Prototype
         private string name;
         private string sex;
         private int age;
-        private string timeArea;
-        private string company;
+        private WorkExperience work;
 
         public Resume(string name)
         {
             this.name = name;
+            work = new WorkExperience();
         }
 
         // 設定個人資訊
@@ -25,17 +25,17 @@ namespace Prototype
         }
 
         // 設定工作經歷
-        public void SetWorkExperience(string timeArea, string company)
+        public void SetWorkExperience(string workDate, string company)
         {
-            this.timeArea = timeArea;
-            this.company = company;
+            work.WorkDate = workDate;
+            work.Company = company;
         }
 
         // 顯示
         public void Display()
         {
             Console.WriteLine($"{name} {sex} {age}");
-            Console.WriteLine($"工作經歷: {timeArea} {company}");
+            Console.WriteLine($"工作經歷: {work.WorkDate} {work.Company}");
         }
 
         public object Clone()

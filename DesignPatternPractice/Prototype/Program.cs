@@ -15,6 +15,7 @@ namespace Prototype
 
             Resume resumeC = (Resume)resumeA.Clone();
             resumeC.SetPersonlInfo("男", 24);
+            resumeC.SetWorkExperience("1998-2003", "ZZ企業");
 
             resumeA.Display();
             resumeB.Display();

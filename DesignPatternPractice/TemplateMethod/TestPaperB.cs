@@ -4,24 +4,21 @@ using System.Text;
 
 namespace TemplateMethod
 {
-    public class TestPaperB
+    public class TestPaperB : TestPaper
     {
-        public void TestQuestion1()
+        protected override string Answer1()
         {
-            Console.WriteLine("題目1...");
-            Console.WriteLine("答案: C");
+            return "C";
         }
 
-        public void TestQuestion2()
+        protected override string Answer2()
         {
-            Console.WriteLine("題目2...");
-            Console.WriteLine("答案: A");
+            return "A";
         }
 
-        public void TestQuestion3()
+        protected override string Answer3()
         {
-            Console.WriteLine("題目3...");
-            Console.WriteLine("答案: B");
+            return "B";
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Observer
 
             // 看股票的同事
             StockObserver colleague1 = new StockObserver("同事1", secretary);
-            StockObserver colleague2 = new StockObserver("同事2", secretary);
+            NBAObserver colleague2 = new NBAObserver("同事2", secretary);
 
             // 櫃台記下了兩位同事
             secretary.Attach(colleague1);

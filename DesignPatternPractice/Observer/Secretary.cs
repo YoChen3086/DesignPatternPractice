@@ -7,7 +7,7 @@ namespace Observer
     public class Secretary
     {
         // 同事列表
-        private IList<StockObserver> observers = new List<StockObserver>();
+        private IList<Observer> observers = new List<Observer>();
         private string action;
 
         // 櫃台狀態
@@ -18,15 +18,21 @@ namespace Observer
         }
 
         // 增加
-        public void Attach(StockObserver observer)
+        public void Attach(Observer observer)
         {
             observers.Add(observer);
+        }
+
+        // 減少
+        public void Detach(Observer observer)
+        {
+            observers.Remove(observer);
         }
 
         // 通知
         public void Notify()
         {
-            foreach (StockObserver observer in observers)
+            foreach (Observer observer in observers)
             {
                 observer.Update();
             }

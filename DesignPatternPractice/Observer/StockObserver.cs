@@ -4,18 +4,13 @@ using System.Text;
 
 namespace Observer
 {
-    public class StockObserver
+    public class StockObserver : Observer
     {
-        private string name;
-        private Secretary sub;
-
-        public StockObserver(string name, Secretary sub)
+        public StockObserver(string name, Secretary sub) : base(name, sub)
         {
-            this.name = name;
-            this.sub = sub;
         }
 
-        public void Update()
+        public override void Update()
         {
             Console.WriteLine($"{sub.SecretartAction} {name} 關閉股票行情，繼續工作!");
         }

@@ -30,9 +30,8 @@ namespace Observer
             StockObserver colleague1 = new StockObserver("同事1", boss);
             NBAObserver colleague2 = new NBAObserver("同事2", boss);
 
-            boss.Attach(colleague1);
-            boss.Attach(colleague2);
-            boss.Detach(colleague1);
+            boss.Update += new EventHandler(colleague1.CloseStockMarket);
+            boss.Update += new EventHandler(colleague2.CloseNBADirectSeeding);
 
             // 老闆回來
             boss.SubjectState = "我胡漢三回來了!";
@@ -43,4 +42,7 @@ namespace Observer
             Console.ReadLine();
         }
     }
+
+    //事件處理程式的委託
+    public delegate void EventHandler();
 }

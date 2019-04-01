@@ -4,13 +4,18 @@ using System.Text;
 
 namespace Observer
 {
-    public class NBAObserver : Observer
+    public class NBAObserver
     {
-        public NBAObserver(string name, Subject sub) : base(name, sub)
+        private string name;
+        private Subject sub;
+
+        public NBAObserver(string name, Subject sub)
         {
+            this.name = name;
+            this.sub = sub;
         }
 
-        public override void Update()
+        public void CloseNBADirectSeeding()
         {
             Console.WriteLine($"{sub.SubjectState} {name} 關閉NBA直播，繼續工作!");
         }

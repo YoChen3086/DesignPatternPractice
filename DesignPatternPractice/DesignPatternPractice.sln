@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethod", "TemplateM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{A5A4A0B4-D860-4BB0-ADEA-E9EE338F80E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{84B56E45-C909-4F71-9B44-D9AE5DAE77D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer", "Observer\Observer.csproj", "{84B56E45-C909-4F71-9B44-D9AE5DAE77D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{18803980-19F7-4555-9956-A9BBBE21C2EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{84B56E45-C909-4F71-9B44-D9AE5DAE77D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B56E45-C909-4F71-9B44-D9AE5DAE77D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B56E45-C909-4F71-9B44-D9AE5DAE77D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18803980-19F7-4555-9956-A9BBBE21C2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18803980-19F7-4555-9956-A9BBBE21C2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18803980-19F7-4555-9956-A9BBBE21C2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18803980-19F7-4555-9956-A9BBBE21C2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

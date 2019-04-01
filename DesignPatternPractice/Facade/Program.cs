@@ -6,20 +6,13 @@ namespace Facade
     {
         static void Main(string[] args)
         {
-            StockOne stock1 = new StockOne();
-            StockTwo stock2 = new StockTwo();
-            NationDebtOne debt = new NationDebtOne();
-            RealtyOne realty = new RealtyOne();
+            Fund fund = new Fund();
 
-            stock1.Buy();
-            stock2.Buy();
-            debt.Buy();
-            realty.Buy();
+            // 基金買入
+            fund.BuyFund();
 
-            stock1.Sell();
-            stock2.Sell();
-            debt.Sell();
-            realty.Sell();
+            // 基金贖回
+            fund.SellFund();
 
             Console.ReadLine();
         }

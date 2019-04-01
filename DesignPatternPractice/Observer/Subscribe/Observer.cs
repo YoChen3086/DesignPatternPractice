@@ -7,9 +7,9 @@ namespace Observer
     public abstract class Observer
     {
         protected string name;
-        protected Secretary sub;
+        protected Subject sub;
 
-        public Observer(string name, Secretary sub)
+        public Observer(string name, Subject sub)
         {
             this.name = name;
             this.sub = sub;

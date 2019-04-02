@@ -10,17 +10,20 @@ namespace AbstractFactory
             Department dept = new Department(1, "開發部");
 
             //IFactory factory = new SqlServerFactory();
-            IFactory factory = new AccessFactory();
-            IUser userServer = factory.CreateUser();
-            IDepartment deptServer = factory.CreateDepartment();
+            //IFactory factory = new AccessFactory();
+            //IUser userServer = factory.CreateUser();
+            //IDepartment deptServer = factory.CreateDepartment();
 
-            userServer.Insert(user);
-            userServer.GetUser(1);
+            IUser iuser = DataAccess.CreateUser();
+            IDepartment idept = DataAccess.CreateDepartment();
+
+            iuser.Insert(user);
+            iuser.GetUser(1);
 
             Console.WriteLine();
 
-            deptServer.Insert(dept);
-            deptServer.GetDepartment(1);
+            idept.Insert(dept);
+            idept.GetDepartment(1);
 
             Console.ReadLine();
         }

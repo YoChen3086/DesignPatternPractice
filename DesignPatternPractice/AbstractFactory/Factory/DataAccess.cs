@@ -1,44 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace AbstractFactory
 {
     public class DataAccess
     {
+        private static readonly string AssemblyName = "AbstractFactory";
         private static readonly string db = "SqlServer";
         //private static readonly string db = "Access";
 
         public static IUser CreateUser()
         {
-            IUser result = null;
-            switch (db)
-            {
-                case "SqlServer":
-                    result = new SqlServerUser();
-                    break;
-                case "Access":
-                    result = new AccessUser();
-                    break;
-            }
-
-            return result;
+            string className = $"{AssemblyName}.{db}User";
+            return (IUser)Assembly.Load(AssemblyName).CreateInstance(className);
         }
 
         public static IDepartment CreateDepartment()
         {
-            IDepartment result = null;
-            switch (db)
-            {
-                case "SqlServer":
-                    result = new SqlServerDepartment();
-                    break;
-                case "Access":
-                    result = new AccessDepartment();
-                    break;
-            }
-
-            return result;
+            string className = $"{AssemblyName}.{db}Department";
+            return (IDepartment)Assembly.Load(AssemblyName).CreateInstance(className);
         }
     }
 }

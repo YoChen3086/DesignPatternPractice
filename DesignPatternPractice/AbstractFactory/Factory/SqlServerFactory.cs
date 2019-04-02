@@ -10,5 +10,10 @@ namespace AbstractFactory
         {
             return new SqlServerUser();
         }
+
+        public IDepartment CreateDepartment()
+        {
+            return new SqlServerDepartment();
+        }
     }
 }

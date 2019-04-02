@@ -4,10 +4,10 @@ using System.Text;
 
 namespace AbstractFactory
 {
-    public interface IFactory
+    public interface IDepartment
     {
-        IUser CreateUser();
+        void Insert(Department user);
 
-        IDepartment CreateDepartment();
+        Department GetDepartment(int id);
     }
 }

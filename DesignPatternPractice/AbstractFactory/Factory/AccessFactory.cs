@@ -10,5 +10,10 @@ namespace AbstractFactory
         {
             return new AccessUser();
         }
+
+        public IDepartment CreateDepartment()
+        {
+            return new AccessDepartment();
+        }
     }
 }

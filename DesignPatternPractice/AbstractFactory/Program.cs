@@ -8,10 +8,11 @@ namespace AbstractFactory
         {
             User user = new User(1, "YoChen");
 
-            SqlServerUser sqlServer = new SqlServerUser();
+            IFactory factory = new SqlServerFactory();
+            IUser server = factory.CreateUser();
 
-            sqlServer.Insert(user);
-            sqlServer.GetUser(1);
+            server.Insert(user);
+            server.GetUser(1);
 
             Console.ReadLine();
         }

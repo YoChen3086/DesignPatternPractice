@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
 
 namespace AbstractFactory
 {
     public class DataAccess
     {
         private static readonly string AssemblyName = "AbstractFactory";
+        // dotnet core 設定檔讀取方式需要再查
         private static readonly string db = "SqlServer";
-        //private static readonly string db = "Access";
 
         public static IUser CreateUser()
         {

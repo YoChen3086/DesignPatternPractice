@@ -5,7 +5,7 @@ namespace AbstractFactory
     public class DataAccess
     {
         private static readonly string AssemblyName = "AbstractFactory";
-        // dotnet core 設定檔讀取方式需要再查
+        // dotnet core 設定檔讀取方式需要再查查
         private static readonly string db = "SqlServer";
 
         public static IUser CreateUser()

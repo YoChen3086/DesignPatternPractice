@@ -4,78 +4,39 @@ namespace State
 {
     class Program
     {
-        // 鐘點
-        static int Hour = 0;
-
-        // 任務完成標記
-        static bool WorkFinished = false;
-
         static void Main(string[] args)
         {
-            Hour = 9;
-            WriteProgram();
+            Work project = new Work();
 
-            Hour = 10;
-            WriteProgram();
+            project.Hour = 9;
+            project.WriteProgram();
 
-            Hour = 12;
-            WriteProgram();
+            project.Hour = 10;
+            project.WriteProgram();
 
-            Hour = 13;
-            WriteProgram();
+            project.Hour = 12;
+            project.WriteProgram();
 
-            Hour = 14;
-            WriteProgram();
+            project.Hour = 13;
+            project.WriteProgram();
 
-            Hour = 17;
+            project.Hour = 14;
+            project.WriteProgram();
 
-            WorkFinished = true;
+            project.Hour = 17;
+
+            project.TaskFinished = true;
             //WorkFinished = false;
 
-            WriteProgram();
+            project.WriteProgram();
 
-            Hour = 19;
-            WriteProgram();
+            project.Hour = 19;
+            project.WriteProgram();
 
-
-            Hour = 22;
-            WriteProgram();
+            project.Hour = 22;
+            project.WriteProgram();
 
             Console.ReadLine();
-        }
-
-        public static void WriteProgram()
-        {
-            if (Hour < 12)
-            {
-                Console.WriteLine($"當前時間: {Hour}點 上午工作，精神百倍");
-            }
-            else if (Hour < 13)
-            {
-                Console.WriteLine($"當前時間: {Hour}點 餓了午休吃飯睡覺");
-            }
-            else if (Hour < 17)
-            {
-                Console.WriteLine($"當前時間: {Hour}點 下午狀態還不錯");
-            }
-            else
-            {
-                if (WorkFinished)
-                {
-                    Console.WriteLine($"當前時間: {Hour}點 下班回家了");
-                }
-                else
-                {
-                    if (Hour < 21)
-                    {
-                        Console.WriteLine($"當前時間: {Hour}點 加班喔，疲累至極");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"當前時間: {Hour}點 不行了，睡著了");
-                    }
-                }
-            }
         }
     }
 }

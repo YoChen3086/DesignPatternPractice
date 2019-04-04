@@ -53,5 +53,19 @@ namespace Memento
             this.attack = 0;
             this.defense = 0;
         }
+
+        // 保存角色狀態
+        public RoleStateMemento SaveState()
+        {
+            return new RoleStateMemento(vitality, attack, defense);
+        }
+
+        // 恢復角色狀態
+        public void RecoveryState(RoleStateMemento memento)
+        {
+            this.vitality = memento.Vitality;
+            this.attack = memento.Attack;
+            this.defense = memento.Defense;
+        }
     }
 }

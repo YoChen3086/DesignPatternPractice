@@ -13,19 +13,15 @@ namespace Memento
             character.StateDisplay();
 
             // 保存進度
-            GameRole backup = new GameRole();
-            backup.Vitality = character.Vitality;
-            backup.Attack = character.Attack;
-            backup.Defense = character.Defense;
+            RoleStateCaretaker stateAdmin = new RoleStateCaretaker();
+            stateAdmin.Memento = character.SaveState();
 
             // 打王
             character.Fight();
             character.StateDisplay();
 
             // 讀取檔案
-            character.Vitality = backup.Vitality;
-            character.Attack = backup.Attack;
-            character.Defense = backup.Defense;
+            character.RecoveryState(stateAdmin.Memento);
 
             character.StateDisplay();
 

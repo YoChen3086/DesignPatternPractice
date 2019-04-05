@@ -29,9 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "Abstract
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "State", "State\State.csproj", "{54468F50-2609-4E51-96FF-818E365481D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{6981CCBE-4B1F-4E06-889F-E3EA50B7A546}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{6981CCBE-4B1F-4E06-889F-E3EA50B7A546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{5E9EDEA3-858A-4AB3-A79E-08AB7222DFAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.csproj", "{5E9EDEA3-858A-4AB3-A79E-08AB7222DFAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{ED372AAC-AAF3-4875-993E-0846BA5BD970}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{5E9EDEA3-858A-4AB3-A79E-08AB7222DFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9EDEA3-858A-4AB3-A79E-08AB7222DFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9EDEA3-858A-4AB3-A79E-08AB7222DFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED372AAC-AAF3-4875-993E-0846BA5BD970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED372AAC-AAF3-4875-993E-0846BA5BD970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED372AAC-AAF3-4875-993E-0846BA5BD970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED372AAC-AAF3-4875-993E-0846BA5BD970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

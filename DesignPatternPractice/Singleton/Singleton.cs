@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Singleton
 {
-    public class Singleton
+    public sealed class Singleton
     {
-        private static Singleton instance;
+        private static readonly Singleton instance = new Singleton();
 
         private static readonly object syncRoot = new object();
 
@@ -15,16 +15,6 @@ namespace Singleton
 
         public static Singleton GetInstance()
         {
-            if (instance == null)
-            {
-                lock (syncRoot)
-                {
-                    if (instance == null)
-                    {
-                        instance = new Singleton();
-                    }
-                }
-            }
             return instance;
         }
     }

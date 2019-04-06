@@ -8,14 +8,19 @@ namespace Singleton
     {
         private static Singleton instance;
 
+        private static readonly object syncRoot = new object();
+
         private Singleton()
         { }
 
         public static Singleton GetInstance()
         {
-            if (instance == null)
+            lock (syncRoot)
             {
-                instance = new Singleton();
+                if (instance == null)
+                {
+                    instance = new Singleton();
+                }
             }
             return instance;
         }

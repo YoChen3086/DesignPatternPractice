@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Composite.csproj", "{ED372AAC-AAF3-4875-993E-0846BA5BD970}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{D0BE402A-F03E-4C6E-83A8-B9ABC0C27B4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterator.csproj", "{D0BE402A-F03E-4C6E-83A8-B9ABC0C27B4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{0FD3A254-9605-453E-8868-2D48561F4EE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{D0BE402A-F03E-4C6E-83A8-B9ABC0C27B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0BE402A-F03E-4C6E-83A8-B9ABC0C27B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0BE402A-F03E-4C6E-83A8-B9ABC0C27B4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD3A254-9605-453E-8868-2D48561F4EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD3A254-9605-453E-8868-2D48561F4EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD3A254-9605-453E-8868-2D48561F4EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD3A254-9605-453E-8868-2D48561F4EE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

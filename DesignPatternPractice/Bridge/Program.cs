@@ -6,18 +6,20 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
-            HandsetBrand phone;
+            HandsetBrand phone = new HandsetBrandN();
 
-            phone = new HandsetBrandMAddressList();
+            phone.SetHandsetSoft(new HandsetGame());
             phone.Run();
 
-            phone = new HandsetBrandMGame();
+            phone.SetHandsetSoft(new HandsetAddressList());
             phone.Run();
 
-            phone = new HandsetBrandNAddressList();
+            phone = new HandsetBrandM();
+
+            phone.SetHandsetSoft(new HandsetGame());
             phone.Run();
 
-            phone = new HandsetBrandNGame();
+            phone.SetHandsetSoft(new HandsetAddressList());
             phone.Run();
 
             Console.ReadLine();

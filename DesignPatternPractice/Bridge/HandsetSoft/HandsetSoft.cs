@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Bridge
 {
-    public class HandsetBrandN : HandsetBrand
+    public abstract class HandsetSoft
     {
+        public abstract void Run();
     }
 }

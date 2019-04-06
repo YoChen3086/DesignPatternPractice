@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Bridge
 {
-    public class HandsetBrandMAddressList : HandsetBrandM
+    public class HandsetGame : HandsetSoft
     {
         public override void Run()
         {
-            Console.WriteLine("執行M品牌手機通訊錄");
+            Console.WriteLine("執行手機遊戲");
         }
     }
 }

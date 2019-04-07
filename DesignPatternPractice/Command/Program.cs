@@ -15,10 +15,10 @@ namespace Command
 
             // 開門營業
             waiter.SetOrder(bakeMuttonCommand1);
-            waiter.Notify();
             waiter.SetOrder(bakeMuttonCommand2);
-            waiter.Notify();
             waiter.SetOrder(bakeChickenWingCommand1);
+
+            // 點菜完畢，通知廚房
             waiter.Notify();
 
             Console.ReadLine();

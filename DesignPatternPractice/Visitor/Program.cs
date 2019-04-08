@@ -7,36 +7,25 @@ namespace Visitor
     {
         static void Main(string[] args)
         {
-            IList<Person> persons = new List<Person>();
+            ObjectStructure structure = new ObjectStructure();
+            structure.Attach(new Man());
+            structure.Attach(new Woman());
 
-            Person man1 = new Man();
-            man1.Action = "成功";
-            persons.Add(man1);
+            // 成功時的反應
+            Action success = new Success();
+            structure.Display(success);
 
-            Person man2 = new Man();
-            man2.Action = "失敗";
-            persons.Add(man2);
+            // 失敗時的反應
+            Action failing = new Failing();
+            structure.Display(failing);
 
-            Person man3 = new Man();
-            man3.Action = "戀愛";
-            persons.Add(man3);
+            // 戀愛時的反應
+            Action amativeness = new Amativeness();
+            structure.Display(amativeness);
 
-            Person woman1 = new Woman();
-            woman1.Action = "成功";
-            persons.Add(woman1);
-
-            Person woman2 = new Woman();
-            woman2.Action = "失敗";
-            persons.Add(woman2);
-
-            Person woman3 = new Woman();
-            woman3.Action = "戀愛";
-            persons.Add(woman3);
-
-            foreach (Person person in persons)
-            {
-                person.GetConclusion();
-            }
+            // 結婚時的反應
+            Action marriage = new Marriage();
+            structure.Display(marriage);
 
             Console.ReadLine();
         }

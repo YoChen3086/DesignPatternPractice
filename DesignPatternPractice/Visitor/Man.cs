@@ -6,24 +6,12 @@ namespace Visitor
 {
     public class Man : Person
     {
-        public override void GetConclusion()
+        public override void Accept(Action vistor)
         {
-            if (action == "成功")
-            {
-                Console.WriteLine($"{this.GetType().Name}{action}時，背後多半有一個偉大的女人。");
-            }
-            else if (action == "失敗")
-            {
-                Console.WriteLine($"{this.GetType().Name}{action}時，悶頭喝酒，誰也不用勸。");
-            }
-            else if (action == "戀愛")
-            {
-                Console.WriteLine($"{this.GetType().Name}{action}時，凡事不懂也要裝懂。");
-            }
-            else
-            {
-                // Nothing
-            }
+            // 首先在客戶程式中將具體狀態作為參數傳遞給[男人]類別完成了一次分派，
+            // 然後[男人]類別呼叫作為參數的[具體狀態]中的方法[男人反應]，
+            // 同時將自己(this)作為參數傳遞進去。這便完成了第二次分派
+            vistor.GetManConclusion(this);
         }
     }
 }

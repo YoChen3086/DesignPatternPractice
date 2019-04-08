@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator", "Mediator\Mediat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyweight.csproj", "{849093EF-C110-4523-B006-5B216F058150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{C0003072-102D-4F90-8637-1F9DC360D5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interpreter", "Interpreter\Interpreter.csproj", "{C0003072-102D-4F90-8637-1F9DC360D5E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "Visitor\Visitor.csproj", "{415BD3E8-C879-4695-B1A1-1E3523A85F7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{C0003072-102D-4F90-8637-1F9DC360D5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0003072-102D-4F90-8637-1F9DC360D5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0003072-102D-4F90-8637-1F9DC360D5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415BD3E8-C879-4695-B1A1-1E3523A85F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415BD3E8-C879-4695-B1A1-1E3523A85F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415BD3E8-C879-4695-B1A1-1E3523A85F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415BD3E8-C879-4695-B1A1-1E3523A85F7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

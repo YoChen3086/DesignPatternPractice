@@ -12,9 +12,9 @@ namespace Flyweight
             this.name = name;
         }
 
-        public override void Use()
+        public override void Use(User user)
         {
-            Console.WriteLine($"網站分類: {name}");
+            Console.WriteLine($"網站分類: {name}, 用戶: {user.Name}");
         }
     }
 }

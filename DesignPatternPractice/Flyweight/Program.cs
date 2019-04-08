@@ -27,22 +27,22 @@ namespace Flyweight
             WebSiteFactory webSiteFactory = new WebSiteFactory();
 
             WebSite wx = webSiteFactory.GetWebSiteCategory("產品展示");
-            wx.Use();
+            wx.Use(new User("小菜"));
 
             WebSite wy = webSiteFactory.GetWebSiteCategory("產品展示");
-            wy.Use();
+            wy.Use(new User("大鳥"));
 
             WebSite wz = webSiteFactory.GetWebSiteCategory("產品展示");
-            wz.Use();
+            wz.Use(new User("嬌嬌"));
 
             WebSite wl = webSiteFactory.GetWebSiteCategory("部落格");
-            wl.Use();
+            wl.Use(new User("老頭"));
 
             WebSite wm = webSiteFactory.GetWebSiteCategory("部落格");
-            wm.Use();
+            wm.Use(new User("明明"));
 
             WebSite wn = webSiteFactory.GetWebSiteCategory("部落格");
-            wn.Use();
+            wn.Use(new User("寶寶"));
 
             Console.WriteLine($"網站分類總數為: {webSiteFactory.GetWebStieCount()}");
 

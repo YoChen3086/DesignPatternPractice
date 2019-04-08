@@ -6,26 +6,26 @@ namespace Visitor
 {
     public class ObjectStructure
     {
-        private IList<Person> elements = new List<Person>();
+        private IList<Element> elements = new List<Element>();
 
         // 增加
-        public void Attach(Person element)
+        public void Attach(Element element)
         {
             elements.Add(element);
         }
 
         // 移除
-        public void Dettach(Person element)
+        public void Dettach(Element element)
         {
             elements.Remove(element);
         }
 
         // 查看顯示
-        public void Display(Action vistor)
+        public void Accept(Visitor vistor)
         {
-            foreach (Person e in elements)
+            foreach (Element element in elements)
             {
-                e.Accept(vistor);
+                element.Accept(vistor);
             }
         }
     }

@@ -7,25 +7,37 @@ namespace Visitor
     {
         static void Main(string[] args)
         {
-            ObjectStructure structure = new ObjectStructure();
-            structure.Attach(new Man());
-            structure.Attach(new Woman());
+            SampleObjectStructure sampleObjectStructure = new SampleObjectStructure();
+            sampleObjectStructure.Attach(new Man());
+            sampleObjectStructure.Attach(new Woman());
 
             // 成功時的反應
             Action success = new Success();
-            structure.Display(success);
+            sampleObjectStructure.Display(success);
 
             // 失敗時的反應
             Action failing = new Failing();
-            structure.Display(failing);
+            sampleObjectStructure.Display(failing);
 
             // 戀愛時的反應
             Action amativeness = new Amativeness();
-            structure.Display(amativeness);
+            sampleObjectStructure.Display(amativeness);
 
             // 結婚時的反應
             Action marriage = new Marriage();
-            structure.Display(marriage);
+            sampleObjectStructure.Display(marriage);
+
+            Console.WriteLine();
+
+            ObjectStructure objectStructure = new ObjectStructure();
+            objectStructure.Attach(new ConcreteElementA());
+            objectStructure.Attach(new ConcreteElementB());
+
+            Visitor concreteVisitor1 = new ConcreteVisitor1();
+            Visitor concreteVisitor2 = new ConcreteVisitor2();
+
+            objectStructure.Accept(concreteVisitor1);
+            objectStructure.Accept(concreteVisitor2);
 
             Console.ReadLine();
         }

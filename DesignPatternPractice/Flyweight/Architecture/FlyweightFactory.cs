@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections;
 
 namespace Flyweight
 {
-  public  class FlyweightFactory
+    public  class FlyweightFactory
     {
-        private Dictionary<string, Flyweight> flyweights = new Dictionary<string, Flyweight>();
+        private Hashtable flyweights = new Hashtable();
 
         public FlyweightFactory()
         {
@@ -17,7 +15,7 @@ namespace Flyweight
 
         public Flyweight GetFlyweight(string key)
         {
-            return flyweights[key];
+            return (Flyweight)flyweights[key];
         }
     }
 }

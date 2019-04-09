@@ -6,14 +6,14 @@ namespace Composite
     {
         static void Main(string[] args)
         {
-            ConcreteCompany root = new ConcreteCompany("北京總公司");
-            root.Add(new HRDepartment("總公司人力資源部"));
-            root.Add(new FinanceDepartment("總公司財務部"));
+            ConcreteCompany companyRoot = new ConcreteCompany("北京總公司");
+            companyRoot.Add(new HRDepartment("總公司人力資源部"));
+            companyRoot.Add(new FinanceDepartment("總公司財務部"));
 
             ConcreteCompany companyA = new ConcreteCompany("上海華東分公司");
             companyA.Add(new HRDepartment("華東分公司人力資源部"));
             companyA.Add(new FinanceDepartment("華東分公司財務部"));
-            root.Add(companyA);
+            companyRoot.Add(companyA);
 
             ConcreteCompany companyB = new ConcreteCompany("南京辦事處");
             companyB.Add(new HRDepartment("南京辦事處人力資源部"));
@@ -26,10 +26,36 @@ namespace Composite
             companyA.Add(companyC);
 
             Console.WriteLine("組織結構圖");
-            root.Display(1);
+            companyRoot.Display(1);
 
             Console.WriteLine("\n職責");
-            root.LineOfDuty();
+            companyRoot.LineOfDuty();
+
+            Console.WriteLine("\n");
+
+            Composite root = new Composite("root");
+            root.Add(new Leaf("Leaf A"));
+            root.Add(new Leaf("Leaf B"));
+
+            Composite comp = new Composite("Composite X");
+            comp.Add(new Leaf("Leaf XA"));
+            comp.Add(new Leaf("Leaf XB"));
+
+            root.Add(comp);
+
+            Composite comp2 = new Composite("Composite XY");
+            comp2.Add(new Leaf("Leaf XYA"));
+            comp2.Add(new Leaf("Leaf XYB"));
+
+            comp.Add(comp2);
+
+            root.Add(new Leaf("Leaf C"));
+
+            Leaf leafD = new Leaf("Leaf D");
+            root.Add(leafD);
+            root.Remove(leafD);
+
+            root.Display(1);            
 
             Console.ReadLine();
         }

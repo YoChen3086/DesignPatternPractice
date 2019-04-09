@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Command
 {
-    public class BakeMuttonCommand : Command
+    public class BakeMuttonCommand : ExampleCommand
     {
         public BakeMuttonCommand(Barbecuer receiver) : base(receiver)
         { }

@@ -6,10 +6,10 @@ namespace Command
 {
     public class Waiter
     {
-        private IList<Command> orders = new List<Command>();
+        private IList<ExampleCommand> orders = new List<ExampleCommand>();
 
         // 設定訂單
-        public void SetOrder(Command command)
+        public void SetOrder(ExampleCommand command)
         {
             if (command.ToString() == "Command.BakeChickenWingCommand")
             {
@@ -23,7 +23,7 @@ namespace Command
         }
 
         // 取消訂單
-        public void CancelOrder(Command command)
+        public void CancelOrder(ExampleCommand command)
         {
             orders.Remove(command);
             Console.WriteLine($"取消訂單: {command.ToString()}, 時間: {DateTime.Now.ToString()}");
@@ -32,7 +32,7 @@ namespace Command
         // 通知全部執行
         public void Notify()
         {
-            foreach (Command command in orders)
+            foreach (ExampleCommand command in orders)
             {
                 command.ExecuteCommand();
             }

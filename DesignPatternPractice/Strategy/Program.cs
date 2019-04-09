@@ -14,6 +14,18 @@ namespace Strategy
         [STAThread]
         static void Main()
         {
+            // Console
+            Context context;
+
+            context = new Context(new ConcreteStrategyA());
+            context.ContextInterface();
+
+            context = new Context(new ConcreteStrategyB());
+            context.ContextInterface();
+
+            context = new Context(new ConcreteStrategyC());
+            context.ContextInterface();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

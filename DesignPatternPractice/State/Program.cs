@@ -36,6 +36,15 @@ namespace State
             project.Hour = 22;
             project.WriteProgram();
 
+            Console.WriteLine("\n");
+
+            Context context = new Context(new ConcreteStateA());
+            // 不斷的請求，同時更改狀態
+            context.Request();
+            context.Request();
+            context.Request();
+            context.Request();
+
             Console.ReadLine();
         }
     }

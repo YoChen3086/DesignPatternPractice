@@ -7,7 +7,7 @@ namespace State
     public class Work
     {
         // 狀態
-        private State current;
+        private TimeState current;
         // 鐘點
         private int hour;
         // 任務完成標記
@@ -30,7 +30,7 @@ namespace State
             set { finish = value; }
         }
 
-        public void SetState(State state)
+        public void SetState(TimeState state)
         {
             current = state;
         }

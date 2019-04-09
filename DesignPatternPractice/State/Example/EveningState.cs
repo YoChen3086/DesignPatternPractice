@@ -4,7 +4,7 @@ using System.Text;
 
 namespace State
 {
-    public class EveningState : State
+    public class EveningState : TimeState
     {
         public override void WriteProgram(Work work)
         {

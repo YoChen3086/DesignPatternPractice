@@ -4,17 +4,17 @@ using System.Text;
 
 namespace State
 {
-    public class NoonState : State
+    public class FornoonState : TimeState
     {
         public override void WriteProgram(Work work)
         {
-            if (work.Hour < 13)
+            if (work.Hour < 12)
             {
-                Console.WriteLine($"當前時間: {work.Hour}點 餓了午休吃飯睡覺");
+                Console.WriteLine($"當前時間: {work.Hour}點 上午工作，精神百倍");
             }
             else
             {
-                work.SetState(new AfternoonState());
+                work.SetState(new NoonState());
                 work.WriteProgram();
             }
         }

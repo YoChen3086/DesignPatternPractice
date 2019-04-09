@@ -4,11 +4,11 @@ using System.Text;
 
 namespace State
 {
-    public class SleepingState : State
+    public class RestState : TimeState
     {
         public override void WriteProgram(Work work)
         {
-            Console.WriteLine($"當前時間: {work.Hour}點 不行了，睡著了");
+            Console.WriteLine($"當前時間: {work.Hour}點 下班回家了");
         }
     }
 }

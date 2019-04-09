@@ -4,7 +4,7 @@ using System.Text;
 
 namespace State
 {
-    public abstract class State
+    public abstract class TimeState
     {
         public abstract void WriteProgram(Work work);
     }

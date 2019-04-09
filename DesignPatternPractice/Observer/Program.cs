@@ -39,6 +39,16 @@ namespace Observer
             // 發出通知
             boss.Notify();
 
+            Console.WriteLine("\n");
+
+            ConcreteSubject concreteSubject = new ConcreteSubject();
+            ConcreteObserver concreteObserver = new ConcreteObserver(concreteSubject, "testSubject");
+
+            concreteSubject.Update += new EventHandler(concreteObserver.Function);
+
+            concreteSubject.SubjectState = "ABC";
+            concreteSubject.SubjectState = "CBA";
+
             Console.ReadLine();
         }
     }

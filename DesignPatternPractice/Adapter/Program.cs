@@ -15,6 +15,11 @@ namespace Adapter
             ym.Attack();
             ym.Defense();
 
+            Console.WriteLine("\n");
+
+            Target target = new Adapter();
+            target.Request();
+
             Console.ReadLine();
         }
     }

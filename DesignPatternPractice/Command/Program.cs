@@ -8,9 +8,9 @@ namespace Command
         {
             // 開店前的準備
             Barbecuer barbecuer = new Barbecuer();
-            Command bakeMuttonCommand1 = new BakeMuttonCommand(barbecuer);
-            Command bakeMuttonCommand2 = new BakeMuttonCommand(barbecuer);
-            Command bakeChickenWingCommand1 = new BakeChickenWingCommand(barbecuer);
+            ExampleCommand bakeMuttonCommand1 = new BakeMuttonCommand(barbecuer);
+            ExampleCommand bakeMuttonCommand2 = new BakeMuttonCommand(barbecuer);
+            ExampleCommand bakeChickenWingCommand1 = new BakeChickenWingCommand(barbecuer);
             Waiter waiter = new Waiter();
 
             // 開門營業
@@ -20,6 +20,15 @@ namespace Command
 
             // 點菜完畢，通知廚房
             waiter.Notify();
+
+            Console.WriteLine("\n");
+
+            Receiver receiver = new Receiver();
+            Command command = new ConcreteCommand(receiver);
+            Invoker invoker = new Invoker();
+
+            invoker.SetCommand(command);
+            invoker.ExecuteCommand();
 
             Console.ReadLine();
         }

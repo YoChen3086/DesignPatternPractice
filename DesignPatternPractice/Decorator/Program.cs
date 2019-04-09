@@ -26,6 +26,16 @@ namespace Decorator
             leatherShoes.Decorate(tie);
             leatherShoes.Show();
 
+            Console.WriteLine("\n");
+
+            Component component = new ConcreteComponent();
+            Decorator decoratorA = new ConcreteDecoratorA();
+            Decorator decoratorB = new ConcreteDecoratorB();
+
+            decoratorA.SetComponent(component);
+            decoratorB.SetComponent(decoratorA);
+            decoratorB.Operation();
+
             Console.ReadLine();
         }
     }

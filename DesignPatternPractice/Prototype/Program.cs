@@ -21,6 +21,12 @@ namespace Prototype
             resumeB.Display();
             resumeC.Display();
 
+            Console.WriteLine("\n");
+
+            ConcretePrototype1 prototype1 = new ConcretePrototype1("My name is YoChen");
+            ConcretePrototype1 prototype2 = (ConcretePrototype1)prototype1.Clone();
+            Console.WriteLine($"Clone: {prototype2.Id}");
+
             Console.ReadLine();
         }
     }

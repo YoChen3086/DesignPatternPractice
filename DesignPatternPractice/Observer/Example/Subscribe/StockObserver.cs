@@ -7,9 +7,9 @@ namespace Observer
     public class StockObserver
     {
         private string name;
-        private Subject sub;
+        private ExampleSubject sub;
 
-        public StockObserver(string name, Subject sub)
+        public StockObserver(string name, ExampleSubject sub)
         {
             this.name = name;
             this.sub = sub;

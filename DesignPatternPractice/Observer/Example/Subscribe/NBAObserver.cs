@@ -7,9 +7,9 @@ namespace Observer
     public class NBAObserver
     {
         private string name;
-        private Subject sub;
+        private ExampleSubject sub;
 
-        public NBAObserver(string name, Subject sub)
+        public NBAObserver(string name, ExampleSubject sub)
         {
             this.name = name;
             this.sub = sub;

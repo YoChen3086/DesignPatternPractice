@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Proxy
 {
-    public class Proxy : IGiveGift
+    public class ExampleProxy : IGiveGift
     {
         private Pursuit gg;
 
-        public Proxy(SchoolGirl mm)
+        public ExampleProxy(SchoolGirl mm)
         {
             gg = new Pursuit(mm);
         }

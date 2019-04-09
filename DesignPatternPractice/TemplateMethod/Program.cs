@@ -20,6 +20,16 @@ namespace TemplateMethod
             paperB.TestQuestion2();
             paperB.TestQuestion3();
 
+            Console.WriteLine("\n");
+
+            AbstractClass abstractClass;
+
+            abstractClass = new ConcreteClassA();
+            abstractClass.TemplateMethod();
+
+            abstractClass = new ConcreteClassB();
+            abstractClass.TemplateMethod();
+
             Console.ReadLine();
         }
     }
